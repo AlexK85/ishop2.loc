@@ -9,10 +9,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 <head>
 
-
-	<!-- удаляет во 2 части курса -->
-	<!-- <title>Luxury Watches A Ecommerce Category Flat Bootstrap Resposive Website Template | Home :: w3layouts</title> -->
-
+	<base href="/product/">
 
 	<?= $this->getMeta(); ?>
 
@@ -20,33 +17,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="megamenu/css/ionicons.min.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="megamenu/css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
 
-	<!--Custom-Theme-files-->
-	<!--theme-style-->
 	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 	<!--//theme-style-->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 
-	<!-- удаляет во 2 части курса -->
-	<!-- <meta name="keywords" content="Luxury Watches Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" /> -->
-
-
-
-	<!-- удаляет во 2 части курса -->
-	<!-- <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script> -->
-
-
-	<!--start-menu-->
-	<link href="css/memenu.css" rel="stylesheet" type="text/css" media="all" />
-
-
-
 	<!-- Во 2 части курса перенесли от сюда вниз в Футер все скрипты  -->
-
-
 
 </head>
 
@@ -97,7 +76,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!--top-header-->
 	<!--start-logo-->
 	<div class="logo">
-		<a href="index.html">
+		<a href="<?=PATH;?>">
 			<h1>Luxury Watches</h1>
 		</a>
 	</div>
@@ -247,6 +226,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<script src="js/jquery-1.11.0.min.js"></script>
 	<script src="js/simpleCart.min.js"> </script>
 
+	<script src="js/imagezoom.js"></script>
+	<script defer src="js/jquery.flexslider.js"></script>
+
 	<!--dropdown-->
 	<script src="js/jquery.easydropdown.js"></script>
 
@@ -273,6 +255,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		});
 	</script>
 
+	<script>
+		// Can also be used with $(document).ready()
+		$(window).load(function() {
+			$('.flexslider').flexslider({
+			animation: "slide",
+			controlNav: "thumbnails"
+			});
+		});
+	</script>
+
 	<script src="js/main.js"></script>
 	<!--End-slider-script-->
 
@@ -280,3 +272,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </body>
 
 </html>
+
+
+						
