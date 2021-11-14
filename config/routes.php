@@ -9,6 +9,13 @@ use ishop\Router;
  */
 
 
+// если в адресе присутствует ^product/
+// далее необходим (?P<controller>[a-z0-9-]+)$  
+// далее добавим слЭш необязательный /?
+Router::add('^product/(?P<alias>[a-z0-9-]+)/?$', ['controller' => 'Product', 'action' => 'view']); // '^$' - начало и конец строки
+
+
+
 
 /**
  *  Общие правила
